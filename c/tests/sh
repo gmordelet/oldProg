@@ -1,0 +1,1 @@
+gcc test.c -lncurses -L ../ncurses/usr/lib/ -I ../ncurses/usr/include/
