@@ -1,0 +1,20 @@
+package pile;
+
+public class PileTest {
+	public static void main(String[] argv) {
+		Pile p = new Pile();
+
+		p.empiler(5);
+		p.empiler(7);
+		p.empiler(9);
+		try {
+			System.out.println(p.depiler());
+			System.out.println(p.depiler());
+			System.out.println(p.depiler());
+			System.out.println(p.depiler());
+		}
+		catch(PileException e) {
+			e.toString();
+		}
+	}
+}

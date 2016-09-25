@@ -1,0 +1,42 @@
+
+#3#UCalorimétrie#2#U
+#UDéfinitions :#U
+La calorimétrie est la mesure de l'énergie transférée par chaleur d'un corps chaud vers un corps froid, encore appelée quantité de chaleur.
+
+La quantité de chaleur cédée ou recue par un corps dont la température passe de O#11#2 à O#12#1 est :
+Q=m.c(O#11#2-O#12#2)=m.c.delta.O
+avec :
+* Q en joule
+* m masse en kg
+* c chaleur massique de la substance qui constitue le corps en j.kg-1.K-1 ou j.kg-1.C-1
+* O en kelvin ou coulomb
+
+La chaleur massique est la quantité de chaleur recue pas 1 kg de substance pour élever sa température de 1°C.
+
+On pose C=m.c donc 
+Q=C.delta.O
+
+Equation calorimétrique :
+EQ=0
+
+#UChangement d'états physiques :#U
+Liquide =>solidification => solide
+Liquide =>vaporisation => gaz
+Solide =>sublimation => gaz
+Solide =>fusion => liquide
+Gaz => liquéfaction => liquide
+Gaz => condensation => solide
+
+*La quantité de chaleur recue par une substance solide pour passer à l'état liquide est :
+Q=m.Lf
+avec :
+Q en joule
+m masse de la substance en kg
+Lf chaleur latente de fucion de la substance en j.kg-1
+
+Q>0 car chaleur recue
+
+La chaleur latente du fusion est la quantité de chaleur necessaire à 1kg de substance solide pour passer à l'état liquide.
+
+*La quantité de chaleur cédée par une substance liquide pour passser à l'état solide et :
+Q=-(m.Lf) <0

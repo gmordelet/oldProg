@@ -1,0 +1,36 @@
+import java.util.List;
+import java.lang.Math;
+
+public class Famille {
+	private List list;
+	
+	public Famille() {
+		for(int i = 0; i < 10; ++i) {
+			if(Math.floor(Math.random() * 10) % 3 == 0) {
+				
+			}
+		}
+	}
+}
+
+interface Oiseau {
+	void decrire();
+}
+
+class Merle implements Oiseau{
+	public void decrire() {
+		System.out.println("Je suis un merle");
+	}
+}
+
+class Pie implements Oiseau{
+	public void decrire() {
+		System.out.println("Je suis une pie");
+	}
+}
+
+class Corbeau implements Oiseau{
+	public void decrire() {
+		System.out.println("Je suis un corbeau");
+	}
+}

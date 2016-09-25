@@ -1,0 +1,42 @@
+package pile;
+
+public class Pile {
+	private Elem last;
+	
+	public Pile() {
+		last = null;
+	}
+	
+	public void empiler(int val) {
+		Elem e = new Elem(val, last);
+		last = e;
+	}
+	
+	public int depiler() throws PileExeption{
+		if(last == null) {
+			throw new PileExeption("Pile vide");
+		}
+	}
+}
+
+class Elem {
+	private int val;
+	private Elem prev;
+	
+	Elem(int v, Elem p) {
+		val = v;
+		prev = p;
+	}
+	
+	int getVal() {
+		return val;
+	}
+	
+	Elem getPrev() {
+		return prev;
+	}
+	
+	void setNext(Elem n) {
+		next = n;
+	}
+}

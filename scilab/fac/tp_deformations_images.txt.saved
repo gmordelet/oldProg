@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="206" xmlns:dc="http://purl.org/dc/elements/1.1/" fileformat="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="2.9.2" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:fr-FR; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="abiword.generator">AbiWord</m>
+<m key="dc.format">application/x-abiword</m>
+</metadata>
+<rdf>
+</rdf>
+<styles>
+<s type="P" name="Normal" basedon="" followedby="Current Settings" props="font-family:Liberation Serif; margin-top:0pt; font-variant:normal; margin-left:0pt; text-indent:0in; widows:2; font-style:normal; font-weight:normal; text-decoration:none; color:000000; line-height:1.0; text-align:left; margin-bottom:0pt; text-position:normal; margin-right:0pt; bgcolor:transparent; font-size:12pt; font-stretch:normal"/>
+</styles>
+<pagesize pagetype="A4" orientation="portrait" width="210.000000" height="297.000000" units="mm" page-scale="1.000000"/>
+<section xid="3">
+<p style="Normal" xid="4" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="1" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="2" props="text-align:left; dom-dir:ltr"><c></c>TP SCILAB : INTERPOLATION D'IMAGES ET DEFORMATIONS</p>
+<p style="Normal" xid="5"><c></c></p>
+<p style="Normal" xid="6" props="text-align:left; dom-dir:ltr">Téléchargez l'archive tp_deformations.zip et extraire le dossier tp_deformations/ de l'archive (avec unzip depuis un terminal ou avec une autre application).</p>
+<p style="Normal" xid="7" props="text-align:left; dom-dir:ltr">Lancez Scilab et faites Fichier -&gt; "Changer le répertoire courant..." pour vous placer dans le dossier "tp_deformations/".</p>
+<p style="Normal" xid="8"><c></c></p>
+<p style="Normal" xid="9"><c></c></p>
+<p style="Normal" xid="10" props="text-align:left; dom-dir:ltr">I) Interpolation d'images</p>
+<p style="Normal" xid="11"><c></c></p>
+<p style="Normal" xid="12" props="text-align:left; dom-dir:ltr">Taper les commandes suivantes dans un script et exécutez les :</p>
+<p style="Normal" xid="13"><c></c></p>
+<p style="Normal" xid="14" props="text-align:left; dom-dir:ltr">   getd('.');</p>
+<p style="Normal" xid="15" props="text-align:left; dom-dir:ltr">   stacksize max;</p>
+<p style="Normal" xid="16" props="text-align:left; dom-dir:ltr">   funcprot(0);</p>
+<p style="Normal" xid="17"><c></c></p>
+<p style="Normal" xid="18" props="text-align:left; dom-dir:ltr">La fonction read_bmp_bg permet de lire une image couleur au format bmp comme une matrice de taille ny x nx x 3.</p>
+<p style="Normal" xid="19" props="text-align:left; dom-dir:ltr">La fonction cview(I,n) permet de visualiser une image couleur ou niveau de gris I dans la fenêtre graphique numéro n de scilab.</p>
+<p style="Normal" xid="20"><c></c></p>
+<p style="Normal" xid="21" props="text-align:left; dom-dir:ltr">   I = read_bmp_bg('spock.bmp');</p>
+<p style="Normal" xid="22" props="text-align:left; dom-dir:ltr">   size(I)</p>
+<p style="Normal" xid="23" props="text-align:left; dom-dir:ltr">   cview(I,0);</p>
+<p style="Normal" xid="24"><c></c></p>
+<p style="Normal" xid="25" props="text-align:left; dom-dir:ltr">La fonction niveau_gris permet de créer la version niveau de gris d'une image couleur (en faisant la moyenne des trois canaux)</p>
+<p style="Normal" xid="26"><c></c></p>
+<p style="Normal" xid="27" props="text-align:left; dom-dir:ltr">   cview(niveau_gris(I),0);</p>
+<p style="Normal" xid="28"><c></c></p>
+<p style="Normal" xid="29"><c></c></p>
+<p style="Normal" xid="30" props="text-align:left; dom-dir:ltr">Si vous souhaitez lire une autre image (400x400 pixels maximum) il faut d'abord la convertir au format .bmp non compressé (par exemple dans un terminal : convert image.jpg +matte +compress image.bmp)</p>
+<p style="Normal" xid="31"><c></c></p>
+<p style="Normal" xid="32"><c></c></p>
+<p style="Normal" xid="33" props="text-align:left; dom-dir:ltr">1) Ecrire une fonction k = entierpp_seuille(x,n) qui renvoie l'entier le plus proche de x compris entre 1 et n (on rappelle que la fonction round(x) renvoie l'entier le plus proche de x.</p>
+<p style="Normal" xid="34" props="text-align:left; dom-dir:ltr">Cette fonction doit pouvoir s'appliquer coefficients par coefficients à un vecteur ou une matrice X. Pour cela on utilisera les fonctions min, max et round de scilab.</p>
+<p style="Normal" xid="35"><c></c></p>
+<p style="Normal" xid="36" props="text-align:left; dom-dir:ltr">2) En utilisant la fonction entierpp_seuille(x,n), écrire une fonction J = interpolation_ppv(I,X,Y) qui calcule l'interpolation de I au plus proche voisin, c'est-à-dire l'image J constituée des pixels de I qui sont les plus proches des coordonnées (X,Y) (réels non nécessairement entiers). On utilisera les indices linéaires de l'image I, à savoir le coefficient I(i,j) d'indice (i,j) peut être accédé par I(i + size(I,1)*(j-1)) et on utilisera la commande matrix pour imposer que l'image J ait la même taille que X.</p>
+<p style="Normal" xid="37"><c></c></p>
+<p style="Normal" xid="38" props="text-align:left; dom-dir:ltr">3) Testez votre fonction interpolation_ppv avec le script suivant :</p>
+<p style="Normal" xid="39"><c></c></p>
+<p style="Normal" xid="40" props="text-align:left; dom-dir:ltr">    I = niveau_gris(I); // version niveau de gris</p>
+<p style="Normal" xid="41" props="text-align:left; dom-dir:ltr">    nx = size(I,2);</p>
+<p style="Normal" xid="42" props="text-align:left; dom-dir:ltr">    ny = size(I,1);</p>
+<p style="Normal" xid="43" props="text-align:left; dom-dir:ltr">    y = -10:0.9:(ny+10);</p>
+<p style="Normal" xid="44" props="text-align:left; dom-dir:ltr">    x = -10:0.7:(nx+10);</p>
+<p style="Normal" xid="45" props="text-align:left; dom-dir:ltr">    Y = y'*ones(x);</p>
+<p style="Normal" xid="46" props="text-align:left; dom-dir:ltr">    X = ones(y')*x;              </p>
+<p style="Normal" xid="47" props="text-align:left; dom-dir:ltr">    J = interpolation_ppv(I,X,Y);</p>
+<p style="Normal" xid="48"><c></c></p>
+<p style="Normal" xid="49"><c></c></p>
+<p style="Normal" xid="50" props="text-align:left; dom-dir:ltr">4) L'interpolation par plus proche voisin est trop "pixelisée".</p>
+<p style="Normal" xid="51" props="text-align:left; dom-dir:ltr">Le pseudo-code ci-dessous décrit l'interpolation bilinéaire qui est plus régulière car elle fait des combinaisons linéaires des pixels voisins.</p>
+<p style="Normal" xid="52" props="text-align:left; dom-dir:ltr">Ecrire une fonction J = interpolation_bilinéaire(I,X,Y) qui reproduit le pseudocode suivant :</p>
+<p style="Normal" xid="53"><c></c></p>
+<p style="Normal" xid="54" props="text-align:left; dom-dir:ltr">    Entrée : I une image niveau de gris de taille ny x nx ; X,Y une liste matricielle de coordonnées</p>
+<p style="Normal" xid="55" props="text-align:left; dom-dir:ltr">    J00 est l'interpolation plus proche voisin de I en (X-0.5, Y-0.5)</p>
+<p style="Normal" xid="56" props="text-align:left; dom-dir:ltr">    J01 est l'interpolation plus proche voisin de I en (X-0.5, Y+0.5)</p>
+<p style="Normal" xid="57" props="text-align:left; dom-dir:ltr">    J10 est l'interpolation plus proche voisin de I en (X+0.5, Y-0.5)</p>
+<p style="Normal" xid="58" props="text-align:left; dom-dir:ltr">    J11 est l'interpolation plus proche voisin de I en (X+0.5, Y+0.5)</p>
+<p style="Normal" xid="59" props="text-align:left; dom-dir:ltr">    FX est la partie fractionnaire de X ( = X moins sa partie entière)</p>
+<p style="Normal" xid="60" props="text-align:left; dom-dir:ltr">    FY est la partie fractionnaire de Y ( = Y moins sa partie entière)</p>
+<p style="Normal" xid="61" props="text-align:left; dom-dir:ltr">    J est la combinaison linéaire (1-FX)*((1-FY)*J00+FY*J01) + FX*((1-FY)*J10+FY*J11)</p>
+<p style="Normal" xid="62"><c></c></p>
+<p style="Normal" xid="63" props="text-align:left; dom-dir:ltr">Testez votre fonction en modifiant les commandes de la question précédente.</p>
+<p style="Normal" xid="64"><c></c></p>
+<p style="Normal" xid="65" props="text-align:left; dom-dir:ltr">5) Une image couleur est une image formée de trois canaux couleur R,G,B (Rouge, Vert, Bleu), on a donc des hypermatrices ny x nx x 3</p>
+<p style="Normal" xid="66" props="text-align:left; dom-dir:ltr">Ecrire une fonction J = interpolation_bilinéaire_rgb(I,X,Y) qui calcule l'interpolation bilinéaire d'une image couleur en effectuant l'interpolation bilinéaire sur chacun des canaux à l'aide d'une boule for.</p>
+<p style="Normal" xid="67" props="text-align:left; dom-dir:ltr">Testez votre fonction en modifiant les commandes des questions précédentes.</p>
+<p style="Normal" xid="68"><c></c></p>
+<p style="Normal" xid="69"><c></c></p>
+<p style="Normal" xid="70" props="text-align:left; dom-dir:ltr">II) Déformations d'images</p>
+<p style="Normal" xid="71"><c></c></p>
+<p style="Normal" xid="72" props="text-align:left; dom-dir:ltr">L'interpolation permet de déterminer les valeurs d'une image sur des coordonnées non entières.</p>
+<p style="Normal" xid="73" props="text-align:left; dom-dir:ltr">Comme on va le voir, on peut également appliquer des transformations géométriques sur la grille de pixels pour obtenir différents effets.</p>
+<p style="Normal" xid="74"><c></c></p>
+<p style="Normal" xid="75" props="text-align:left; dom-dir:ltr">1) Homographies</p>
+<p style="Normal" xid="76"><c></c></p>
+<p style="Normal" xid="77" props="text-align:left; dom-dir:ltr">On peut simuler une vue inclinée d'un plan à l'aide d'une homographie.</p>
+<p style="Normal" xid="78"><c></c></p>
+<p style="Normal" xid="79" props="text-align:left; dom-dir:ltr">a) Exécutez le script suivant :</p>
+<p style="Normal" xid="80"><c></c></p>
+<p style="Normal" xid="81" props="text-align:left; dom-dir:ltr">    getd('.');</p>
+<p style="Normal" xid="82" props="text-align:left; dom-dir:ltr">    // image satellite</p>
+<p style="Normal" xid="83" props="text-align:left; dom-dir:ltr">    u = readpgm("sat.pgm")';</p>
+<p style="Normal" xid="84" props="text-align:left; dom-dir:ltr">    cview(u,0);</p>
+<p style="Normal" xid="85"><c></c></p>
+<p style="Normal" xid="86" props="text-align:left; dom-dir:ltr">    // positions</p>
+<p style="Normal" xid="87" props="text-align:left; dom-dir:ltr">    xt = [800,500,1000,1000];</p>
+<p style="Normal" xid="88" props="text-align:left; dom-dir:ltr">    yt = [600,80,100,130];</p>
+<p style="Normal" xid="89"><c></c></p>
+<p style="Normal" xid="90" props="text-align:left; dom-dir:ltr">    R = 256 // taille x et y de chaque image</p>
+<p style="Normal" xid="91" props="text-align:left; dom-dir:ltr">    v = zeros(R,R);</p>
+<p style="Normal" xid="92" props="text-align:left; dom-dir:ltr">    cx1 = [1,R,R,1];</p>
+<p style="Normal" xid="93" props="text-align:left; dom-dir:ltr">    cy1 = [1,1,R,R];</p>
+<p style="Normal" xid="94" props="text-align:left; dom-dir:ltr">    [x,y] = meshgrid(1:R,1:R);</p>
+<p style="Normal" xid="95" props="text-align:left; dom-dir:ltr">    [X,Y] = homographie(x,y,cx1,cy1,xt,yt);</p>
+<p style="Normal" xid="96" props="text-align:left; dom-dir:ltr">    v = interpolation_ppv(u,X,Y);</p>
+<p style="Normal" xid="97" props="text-align:left; dom-dir:ltr">    cview(v,1);</p>
+<p style="Normal" xid="98"><c></c></p>
+<p style="Normal" xid="99"><c></c></p>
+<p style="Normal" xid="100" props="text-align:left; dom-dir:ltr">b) Exécutez le script suivant :</p>
+<p style="Normal" xid="101"><c></c></p>
+<p style="Normal" xid="102" props="text-align:left; dom-dir:ltr">    // image satellite</p>
+<p style="Normal" xid="103" props="text-align:left; dom-dir:ltr">    u = readpgm("sat.pgm")';</p>
+<p style="Normal" xid="104" props="text-align:left; dom-dir:ltr">    cview(u,0);</p>
+<p style="Normal" xid="105"><c></c></p>
+<p style="Normal" xid="106" props="text-align:left; dom-dir:ltr">    // positions de début et de fin</p>
+<p style="Normal" xid="107" props="text-align:left; dom-dir:ltr">    xt0 = [1117,1060,1107,1156];</p>
+<p style="Normal" xid="108" props="text-align:left; dom-dir:ltr">    yt0 = [111,65,20,66];</p>
+<p style="Normal" xid="109" props="text-align:left; dom-dir:ltr">    xt1 = [644,23,956,964];</p>
+<p style="Normal" xid="110" props="text-align:left; dom-dir:ltr">    yt1 = [1000,101,194,199];</p>
+<p style="Normal" xid="111"><c></c></p>
+<p style="Normal" xid="112" props="text-align:left; dom-dir:ltr">    n = 50  // nombre d'images</p>
+<p style="Normal" xid="113" props="text-align:left; dom-dir:ltr">    R = 256 // taille x et y de chaque image</p>
+<p style="Normal" xid="114" props="text-align:left; dom-dir:ltr">    v = zeros(R,R,n);</p>
+<p style="Normal" xid="115" props="text-align:left; dom-dir:ltr">    cx1 = [1,R,R,1];</p>
+<p style="Normal" xid="116" props="text-align:left; dom-dir:ltr">    cy1 = [1,1,R,R];</p>
+<p style="Normal" xid="117" props="text-align:left; dom-dir:ltr">    [x,y] = meshgrid(1:R,1:R);</p>
+<p style="Normal" xid="118" props="text-align:left; dom-dir:ltr">    for i=1:n</p>
+<p style="Normal" xid="119" props="text-align:left; dom-dir:ltr">    cx2 = ((n-i)*xt0+(i-1)*xt1)/(n-1);</p>
+<p style="Normal" xid="120" props="text-align:left; dom-dir:ltr">    cy2 = ((n-i)*yt0+(i-1)*yt1)/(n-1);</p>
+<p style="Normal" xid="121" props="text-align:left; dom-dir:ltr">    [X,Y] = homographie(x,y,cx1,cy1,cx2,cy2);</p>
+<p style="Normal" xid="122" props="text-align:left; dom-dir:ltr">    v(:,:,i) = interpolation_ppv(u,X,Y);</p>
+<p style="Normal" xid="123" props="text-align:left; dom-dir:ltr">    end</p>
+<p style="Normal" xid="124" props="text-align:left; dom-dir:ltr">    cmview(v,15); // cmview = visualisation de film</p>
+<p style="Normal" xid="125"><c></c></p>
+<p style="Normal" xid="126"><c></c></p>
+<p style="Normal" xid="127" props="text-align:left; dom-dir:ltr">b) Dans les scripts ci-dessus, changez la fonction d'interpolation par l'interpolation bilinéaire.</p>
+<p style="Normal" xid="128"><c></c></p>
+<p style="Normal" xid="129"><c></c></p>
+<p style="Normal" xid="130" props="text-align:left; dom-dir:ltr">2) Perturbation par un champ de vecteur</p>
+<p style="Normal" xid="131"><c></c></p>
+<p style="Normal" xid="132" props="text-align:left; dom-dir:ltr">Expliquez ce que fait le script suivant et testez le (vous pouvez essayer différentes images)</p>
+<p style="Normal" xid="133"><c></c></p>
+<p style="Normal" xid="134" props="text-align:left; dom-dir:ltr">I = read_bmp_bg('spock.bmp');</p>
+<p style="Normal" xid="135" props="text-align:left; dom-dir:ltr">size(I)</p>
+<p style="Normal" xid="136" props="text-align:left; dom-dir:ltr">nx = size(I,2);</p>
+<p style="Normal" xid="137" props="text-align:left; dom-dir:ltr">ny = size(I,1);</p>
+<p style="Normal" xid="138" props="text-align:left; dom-dir:ltr">y = 1:ny;</p>
+<p style="Normal" xid="139" props="text-align:left; dom-dir:ltr">x = 1:nx;</p>
+<p style="Normal" xid="140" props="text-align:left; dom-dir:ltr">Y = y'*ones(x);</p>
+<p style="Normal" xid="141" props="text-align:left; dom-dir:ltr">X = ones(y')*x;              </p>
+<p style="Normal" xid="142"><c></c></p>
+<p style="Normal" xid="143" props="text-align:left; dom-dir:ltr">xdel(winsid());</p>
+<p style="Normal" xid="144" props="text-align:left; dom-dir:ltr">r = 20; </p>
+<p style="Normal" xid="145" props="text-align:left; dom-dir:ltr">A = 10; </p>
+<p style="Normal" xid="146" props="text-align:left; dom-dir:ltr">snx = floor(nx/r);</p>
+<p style="Normal" xid="147" props="text-align:left; dom-dir:ltr">sny = floor(ny/r);</p>
+<p style="Normal" xid="148" props="text-align:left; dom-dir:ltr">U = A*(rand(sny,snx)&gt;0.5);</p>
+<p style="Normal" xid="149" props="text-align:left; dom-dir:ltr">V = A*(rand(sny,snx)&gt;0.5);</p>
+<p style="Normal" xid="150" props="text-align:left; dom-dir:ltr">NU = interpolation_bilineaire(U,X/r,Y/r);</p>
+<p style="Normal" xid="151" props="text-align:left; dom-dir:ltr">NV = interpolation_bilineaire(V,X/r,Y/r);</p>
+<p style="Normal" xid="152" props="text-align:left; dom-dir:ltr">J = interpolation__bilinrgb(I,X+NU,Y+NV);</p>
+<p style="Normal" xid="153" props="text-align:left; dom-dir:ltr">cview(I);</p>
+<p style="Normal" xid="154" props="text-align:left; dom-dir:ltr">cview(J);</p>
+<p style="Normal" xid="155"><c></c></p>
+<p style="Normal" xid="156"><c></c></p>
+<p style="Normal" xid="157" props="text-align:left; dom-dir:ltr">3) Oscillation dans l'eau</p>
+<p style="Normal" xid="158"><c></c></p>
+<p style="Normal" xid="159" props="text-align:left; dom-dir:ltr">On peut également faire varier dans le temps le champ de vecteurs qui perturbe l'image.</p>
+<p style="Normal" xid="160" props="text-align:left; dom-dir:ltr">Testez le script suivant :</p>
+<p style="Normal" xid="161"><c></c></p>
+<p style="Normal" xid="162" props="text-align:left; dom-dir:ltr">I = read_bmp_bg('spock.bmp');</p>
+<p style="Normal" xid="163" props="text-align:left; dom-dir:ltr">I = niveau_gris(I);</p>
+<p style="Normal" xid="164" props="text-align:left; dom-dir:ltr">size(I)</p>
+<p style="Normal" xid="165" props="text-align:left; dom-dir:ltr">nx = size(I,2);</p>
+<p style="Normal" xid="166" props="text-align:left; dom-dir:ltr">ny = size(I,1);</p>
+<p style="Normal" xid="167" props="text-align:left; dom-dir:ltr">y = 1:ny;</p>
+<p style="Normal" xid="168" props="text-align:left; dom-dir:ltr">x = 1:nx;</p>
+<p style="Normal" xid="169" props="text-align:left; dom-dir:ltr">Y = y'*ones(x);</p>
+<p style="Normal" xid="170" props="text-align:left; dom-dir:ltr">X = ones(y')*x;              </p>
+<p style="Normal" xid="171"><c></c></p>
+<p style="Normal" xid="172" props="text-align:left; dom-dir:ltr">xdel(winsid());</p>
+<p style="Normal" xid="173" props="text-align:left; dom-dir:ltr">npt = 1;</p>
+<p style="Normal" xid="174" props="text-align:left; dom-dir:ltr">fpp = 20;</p>
+<p style="Normal" xid="175" props="text-align:left; dom-dir:ltr">T = linspace(0, npt*2*%pi,10*npt+1);</p>
+<p style="Normal" xid="176" props="text-align:left; dom-dir:ltr">T($) = [];</p>
+<p style="Normal" xid="177" props="text-align:left; dom-dir:ltr">xm = floor(nx/2);</p>
+<p style="Normal" xid="178" props="text-align:left; dom-dir:ltr">ym = floor(ny/2);</p>
+<p style="Normal" xid="179" props="text-align:left; dom-dir:ltr">R = sqrt((X-xm).^2 + (Y-ym).^2);</p>
+<p style="Normal" xid="180" props="text-align:left; dom-dir:ltr">np = 6;</p>
+<p style="Normal" xid="181" props="text-align:left; dom-dir:ltr">mov = zeros(size(X,1),size(X,2),length(T));</p>
+<p style="Normal" xid="182" props="text-align:left; dom-dir:ltr">for i = 1:length(T)</p>
+<p style="Normal" xid="183" props="text-align:left; dom-dir:ltr">    t = T(i);</p>
+<p style="Normal" xid="184" props="text-align:left; dom-dir:ltr">    A = 10^2; // amplitude</p>
+<p style="Normal" xid="185" props="text-align:left; dom-dir:ltr">    F = A*cos(np*2*%pi*R/nx+t).*(1+np*R/nx).^(-1);</p>
+<p style="Normal" xid="186" props="text-align:left; dom-dir:ltr">    NU = diff(F,1,2); // (NU, NV) =  gradient de la fonction F</p>
+<p style="Normal" xid="187" props="text-align:left; dom-dir:ltr">    NU = [NU,NU(:,1)];</p>
+<p style="Normal" xid="188" props="text-align:left; dom-dir:ltr">    NV = diff(F,1,1);</p>
+<p style="Normal" xid="189" props="text-align:left; dom-dir:ltr">    NV = [NV;NV(1,:)];</p>
+<p style="Normal" xid="190" props="text-align:left; dom-dir:ltr">    J = interpolation_bilineaire(I,X+NU,Y+NV);</p>
+<p style="Normal" xid="191" props="text-align:left; dom-dir:ltr">    mov(:,:,i) = J;</p>
+<p style="Normal" xid="192" props="text-align:left; dom-dir:ltr">end</p>
+<p style="Normal" xid="193" props="text-align:left; dom-dir:ltr">cmview(mov,10);</p>
+<p style="Normal" xid="194"><c></c></p>
+<p style="Normal" xid="195"><c></c></p>
+<p style="Normal" xid="196"><c></c></p>
+<p style="Normal" xid="197"><c></c></p>
+<p style="Normal" xid="198"><c></c></p>
+<p style="Normal" xid="199"><c></c></p>
+<p style="Normal" xid="200"><c></c></p>
+<p style="Normal" xid="201"><c></c></p>
+<p style="Normal" xid="202"><c></c></p>
+<p style="Normal" xid="203"><c></c></p>
+<p style="Normal" xid="204"><c></c></p>
+<p style="Normal" xid="205"> </p>
+<p style="Normal" xid="206"></p>
+</section>
+</abiword>

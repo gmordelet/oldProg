@@ -1,0 +1,7 @@
+INDEX VERSION 1.126+/home/gregoire/Documents/programmes/java/eclipse/.metadata/.plugins/org.eclipse.jdt.core
+3680456500.index
+4017945560.index
+3765994889.index
+2089348824.index
+3703194086.index
+4247257529.index

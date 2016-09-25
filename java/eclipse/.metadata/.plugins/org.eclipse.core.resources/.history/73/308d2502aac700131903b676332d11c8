@@ -1,0 +1,8 @@
+import java.io.*;
+
+public class EntreeSorties1 {
+	public static void main (String [] args) {
+		File f = new File("electro.txt");
+		System.out.println(f.getPath());
+	}
+}

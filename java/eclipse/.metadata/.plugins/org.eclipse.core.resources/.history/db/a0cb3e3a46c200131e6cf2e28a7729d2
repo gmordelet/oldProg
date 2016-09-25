@@ -1,0 +1,177 @@
+package world;
+
+import java.awt.Color;
+import java.lang.Math;
+import java.util.Vector;
+
+public class WorldMatrix {
+	private Voxel[][][] matrix;
+	private int nX, nY, nZ, voxelLength, minX, minY, minZ, maxX, maxY, maxZ;
+	private Vector<Light> lights;
+
+	public WorldMatrix(int voxelLength, int nX, int nY, int nZ) {
+		System.out.println("Debut initialisation WorldMatrix");
+		matrix = new Voxel[nX][nY][nZ];
+		this.voxelLength = voxelLength;
+		this.nX = nX;
+		this.nY = nY;
+		this.nZ = nZ;
+		minX = -nX * voxelLength / 2;
+		minY = -nY * voxelLength / 2;
+		minZ = 0;
+		maxX = minX + nX * voxelLength;
+		maxY = minY + nY * voxelLength;
+		maxZ = nZ * voxelLength;
+		this.setVoxelsCoordinates();
+		lights = new Vector<Light>();
+		Light.setWorldMatrix(this);
+		System.out.println("Fin initialisation WorldMatrix");
+	}
+
+	private void setVoxelsCoordinates() {
+		int lx, ly; 
+		lx = voxelLength * nX;
+		ly = voxelLength * nY;	
+
+		for(int x = 0; x < nX; ++x) {
+			for(int y = 0; y < nY; ++y) {
+				for(int z = 0; z < nZ; ++z) {
+					matrix[x][y][z] = new Voxel(
+							-lx / 2 + x * voxelLength,
+							-ly / 2 + y * voxelLength,
+							z * voxelLength
+							);
+				}
+			}
+		}
+	}
+
+	public void displayVoxelsCoordinates() {
+		System.out.println("diplayVoxelsCoordinates()");
+		for(int x = 0; x < nX; ++x) {
+			for(int y = 0; y < nY; ++y) {
+				for(int z = 0; z < nZ; ++z) {
+					System.out.println("matrix[" + x + "][" + y + "[" + z + "]");
+					System.out.println(" " + matrix[x][y][z].displayVoxelCoordinates());
+				}
+			}
+		}
+	}
+
+	public Voxel returnVoxelFromXYZ(float x, float y, float z) {
+		int xFloor, yFloor, zFloor, x1, y1, z1;
+
+		if(x < minX || x >= maxX
+				|| y < minY || y >= maxY
+				|| z < minZ || z >= maxZ) {
+			return null;
+		}
+
+		xFloor = (int)Math.floor(x);
+		yFloor = (int)Math.floor(y);
+		zFloor = (int)Math.floor(z); 
+		x1 = (xFloor + nX * voxelLength / 2) / voxelLength;
+		y1 = (yFloor + nY * voxelLength / 2) / voxelLength;
+		z1 = zFloor / voxelLength;
+
+		return matrix[x1][y1][z1];
+	}
+	
+	public int[] getVoxelXYZ(float x, float y, float z) {		
+		int []p;
+		int xFloor, yFloor, zFloor;
+
+		if(x < minX || x >= maxX
+				|| y < minY || y >= maxY
+				|| z < minZ || z >= maxZ) {
+			return null;
+		}
+
+		p = new int[3];
+		xFloor = (int)Math.floor(x);
+		yFloor = (int)Math.floor(y);
+		zFloor = (int)Math.floor(z); 
+		p[0] = (xFloor + nX * voxelLength / 2) / voxelLength;
+		p[1] = (yFloor + nY * voxelLength / 2) / voxelLength;
+		p[2] = zFloor / voxelLength;
+
+		return p;
+	}	
+
+	public Voxel returnVoxelXYZ(int[] xYZ) {
+		return matrix[xYZ[0]][xYZ[1]][xYZ[2]]; 
+	}
+
+	public void addLight(Point p) {
+		Light light = new Light(p);
+		lights.add(light);
+		
+	}
+	
+	public Vector<Light> getLights() {
+		return lights;
+	}
+	
+	int getNx() {
+		return nX;
+	}
+
+	public int getNy() {
+		return nY;
+	}
+
+	public int getnZ() {
+		return nZ;
+	}
+
+	public int getMinX() {
+		return minX;
+	}
+
+	public int getMinY() {
+		return minY;
+	}
+
+	public int getMinZ() {
+		return minZ;
+	}
+
+	public int getMaxX() {
+		return maxX;
+	}
+
+	public int getMaxY() {
+		return maxY;
+	}
+
+	public int getMaxZ() {
+		return maxZ;
+	}
+	public int getVoxelLength() {
+		return voxelLength;
+	}
+
+	public Voxel[][][] getMatrix() {
+		return matrix;
+	}
+
+	public void createWorld() {
+		Point pLight;
+		
+		pLight = new Point(maxX/2, maxY, maxZ/2);
+		addLight(pLight);
+		
+		for(int x = 0; x < nX; ++x) {
+			for(int z = 0; z < nZ; ++z) {
+				matrix[x][nY / 4][z].setColor(Color.orange);
+			}
+		}
+		
+		for(int x = 0; x < nX; ++x) {
+			for(int z = 0; z < nZ; ++z) {
+				matrix[x][nY / 2][z].setColor(Color.black);
+			}
+		}
+
+	}
+}

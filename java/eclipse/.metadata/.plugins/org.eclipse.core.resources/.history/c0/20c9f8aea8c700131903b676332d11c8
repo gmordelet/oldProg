@@ -1,0 +1,22 @@
+import java.io.*;
+
+public class EntreeSorties1 {
+	public static void main (String [] args) {
+		BufferedReader br;
+		// System.in étant de type flux binaire, l'utilisation de InputStreamReader permet la
+		// transformation en caractères
+		br = new BufferedReader (new InputStreamReader (System.in));
+		System.out.println("Entrez des phrases suivies de Entree puis une chaîne vide pour finir");
+				try{
+					while(true){
+						String chaine = br.readLine();
+						if(chaine.length() == 0) {
+							System.out.println("Vous avez entré : " + chaine);
+							System.exit(0);
+						}
+					}
+				}catch (IOException e) {
+					System.out.println(e.toString());
+				}
+	}
+}

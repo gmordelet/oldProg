@@ -1,0 +1,9 @@
+package pile;
+
+import java.lang.Exception;
+
+public class PileException extends Exception{
+	public PileException(String st) {
+		this(st);
+	}
+}

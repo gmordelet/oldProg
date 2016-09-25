@@ -1,0 +1,83 @@
+
+1) Le systeme
+     Definition :
+ Le systeme est l'objet 
+(ou l'ensemble des objets)
+auquel on s'interesse. 
+Un systeme en mouvement est
+aussi appellé mobile.
+
+Un systeme peut etre :
+ -indeformable si la distance
+separant 2 points quelconques
+du  systeme reste constante
+au cours de son evolution.
+Il est appele SOLIDE .
+ -deformable : ex: ressort
+ -ponctuel : si ses dimensions
+sont tres petites par rapport 
+aux dimensions intervenant dans
+le problème. Il est aussi
+appele POINT MATERIEL .
+
+2) Relativite du mouvement :
+
+Pour decrire un mouvement il 
+faut choisir un objet (appele
+REFERENTIEL D'ESPACE) de 
+reference par rapport auquel
+on etudie le mouvement.
+Il est l'association :
+- d'une origine O
+- d'une base orthonormale
+
+Il faut un REFERENTIEL DE TEMPS
+composé : - d'une horloge
+- d'une origine de temps
+- d'une unite de temps
+
+3) Translation et rotation d'un solide :
+
+     Trajectoire d'un point :
+La trajectoire d'un point en 
+mouvement est l'ensemble des
+positions successives occupées
+par ce point au cours de son
+deplacement. C'est donc la 
+courbe decrite par ce point.
+
+    Translation d'un solide :
+Un solide est anime d'un mouvement 
+de translation s'il se deplace //
+a lui meme, c'est a dire si un 
+segment joignant 2 de ses points
+conserve la meme direction et que
+les trajectoire des points du solide
+sont superposables.
+
+Si la trajectoire d'un point est une 
+droite alors le mouvement est RECTILIGNE.
+Si la trajectoire est une courbe
+alors le mouvement est CURVILIGNE.
+Si la trajectoire est un cercle
+alors le mouvement est CIRCULAIRE.
+
+Consequences pour le solide en traslation :
+Si les mouvement des points du solide
+est rectiligne alors le solide est animé
+d'une TRANSLATION RECTILIGNE.
+Blablabla ...
+
+
+     Rotation d'un solide :
+Un solide est animé d'un mouvement 
+de rotation si tous ses points decrivent 
+des cercles centres sur une meme droites 
+appelle axe de rotation. ex : porte.
+
+     Mouvement complexe
+Certains solides peuvent etre animes 
+d'un mouvement complexe qui peut etre 
+decompose en plusieurs mouvement.
+
+

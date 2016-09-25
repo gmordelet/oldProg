@@ -1,0 +1,14 @@
+import java.io.*;
+
+public class EntreeSorties1 {
+	public static void main (String [] args) {
+		File f = new File("test");
+		try {
+			FileWriter fw = new FileWriter(f);
+			fw.write("salut");
+		}
+		catch(IOException e) {
+			System.out.println(e.toString());
+		}
+	}
+}

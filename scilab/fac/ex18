@@ -1,0 +1,8 @@
+function y = Horner_Poly(P, x)
+    a = coeff(P);
+    n = length(a) - 1;
+    y = a(n + 1) * ones(x);
+    for i = 1:n
+        y = x .* y + a(n - i + 1) * ones(x);
+    end
+endfunction

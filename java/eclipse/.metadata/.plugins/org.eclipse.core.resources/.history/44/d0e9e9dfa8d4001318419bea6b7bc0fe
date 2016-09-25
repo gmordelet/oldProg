@@ -1,0 +1,30 @@
+import java.lang.Exception;
+
+public class test {
+	public static void main(String[] args) {
+		try{
+		System.out.println(test1.t1());
+		}
+		catch(Exception e)
+		{
+			System.out.println("Erreur Main");
+		}
+	}
+}
+
+class test1{
+	static public int t1() {
+		try {
+			t2();
+		}
+		catch(Exception e) {
+			System.out.println("Erreur");
+		}
+		System.out.println("Blop");
+		return 1;
+	}
+	
+	static public void t2() throws Exception{
+		throw new Exception();
+	}
+}

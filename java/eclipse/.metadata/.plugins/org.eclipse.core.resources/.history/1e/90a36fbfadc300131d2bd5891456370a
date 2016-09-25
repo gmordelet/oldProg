@@ -1,0 +1,10 @@
+package etudiant;
+
+public class testEtudiant {
+	public static void main(String[] argv) {
+		Etudiant etu = new Etudiant("François");
+		
+		etu.travailler();
+		etu.seReposer();
+	}
+}

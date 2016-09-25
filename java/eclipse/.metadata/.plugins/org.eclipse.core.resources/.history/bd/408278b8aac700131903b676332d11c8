@@ -1,0 +1,14 @@
+import java.io.*;
+
+public class EntreeSorties1 {
+	public static void main (String [] args) {
+		byte[] arr = new byte[10];
+		String s;
+		
+		for(byte i = 0; i < arr.length; ++i) {
+			arr[i] = i;
+		}
+		s = new String(arr);
+		System.out.println(s);
+	}
+}

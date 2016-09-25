@@ -1,0 +1,65 @@
+
+#3#UL'ENERGIE#2#U
+
+#U#3Définition :#U#2
+Un système possède de l'énergie s'il est capable de produire des transformations.
+
+#U#3Différentes formes d'énergie emmagasinées dans un système :#U#2
+
+#UEnergie Cinétique Macroscopique:#U
+Energie que possède un corps en mouvement. Elle varie quand le vitesse du systeme varie.
+
+#UEnergie Potentiel:#U
+Energie que possède un système déformable dans lequel existe des interractions.
+exemples :
+* Energie potentielle de pesanteur :
+énergie que possède le système (objet;Terre), elle est liée à la position de l'objet par rapport à la Terre.
+* Energie potentielle élastique :
+énergie que possède un corps élastique que l'on a déformé.
+* Energie potentielle microscopique :
+énergie chimique, cad énergie emmagasinée par exemple dans les molécules.
+
+#U Energie Cinétique Microscopique:#U
+Energie que possède les espèces chimiques (atomes, ions, molécules) qui constituent la matière. Elle augmente quand la température augmente.
+
+
+#3#ULes transferts d'énergie :#U#2
+
+#UTransfert d'énergie par travail électrique:#U
+c'est un transfert d'énergie assuré par un courant électrique.
+
+#UTransfert d'énergie par rayonnement:#U
+c'est un transfert d'énergie assuré par la lumière.
+
+#UTransfert d'énergie par chaleur:#U
+c'est un transfert d'énergie qui se manifeste par une variation de température ou par un changement d'état.
+
+#UTransfert d'énergie par travail mécanique:#U
+c'est un transfert d'énergie qui a pour effet de modifier la position ou la forme d'un objet.
+
+
+#3#UModes de transfert par chaleur#2#U
+Dans les solides l'agitation thermique est transmise de proche en proche des zones chaudes du solide vers les zones froides : il n'y a pas de transport de matière.
+
+Dans les fluides l'énergie cinétique microscopique est transférée par des mouvements de convection des régions chaudes vers les froides : il y a transport de matière.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

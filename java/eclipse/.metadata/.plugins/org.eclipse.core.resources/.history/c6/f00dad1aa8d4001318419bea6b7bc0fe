@@ -1,0 +1,22 @@
+import java.lang.Exception;
+
+public class test {
+	public static void main(String[] args) {
+		test1.t1();
+	}
+}
+
+class test1{
+	static public void t1() {
+		try {
+			t2();
+		}
+		catch(Exception e) {
+			System.out.println("Erreur");
+		}
+	}
+	
+	static public void t2() throws Exception{
+		throw new Exception();
+	}
+}

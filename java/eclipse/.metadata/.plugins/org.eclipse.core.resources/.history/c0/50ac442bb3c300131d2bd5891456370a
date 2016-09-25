@@ -1,0 +1,16 @@
+package etudiant;
+
+public class testEtudiant {
+	public static void main(String[] args) {
+		Etudiant etu;
+		if(args[0] == null) {
+			etu = new Etudiant("François");
+		}
+		else {
+			etu = new Etudiant(args[0]); 
+		}
+		
+		etu.travailler();
+		etu.seReposer();
+	}
+}

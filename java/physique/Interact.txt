@@ -1,0 +1,42 @@
+#U#3 Interractions entre objets #U#2
+
+Une force est une action mécanique capable de mettre en mouvement un objet ou de modifier le mouvement d'un objet. On dit que la force a un effet dynamique.
+
+Elle peut aussi provoquer la déformation d'un corps élastique, empecher le mouvement d'un solide, c'est à dire le maintenir en équilibre. On dit que la force a un effet statique.
+
+
+Une action est localisée quand elle s'exerce en un point déterminé. Elle est caractérisé par son point d'application.
+
+Une action est répartie quand elle s'éxerce sur une surface du système ou sur la totalité du volume.
+Le vecteur force est alors la somme de vecteurs force élémentaires.
+
+#U Forces à distance : #U
+
+force magnétique
+force électrostatique
+
+
+#U Forces de contact : #U
+
+1) tension d'un ressort
+
+    T= k * x
+T en N   
+k en N.M#E#1-1#E#2
+x = masse
+
+2) Tension d'un fil
+
+3) Réaction d'un support
+La réaction R est la force exercée par le support sur le solide. Elle empeche le solide de s'enfoncer dans le support. noté #VR#V
+ 
+4) Poussée d'Archimède
+
+
+#U Principe des interaction : #U
+
+Lorsque 2 solide S1 et S2 sont en interraction, le solide S1 exerce la force #VF#V#11->2#2 sur le solide S2 et le solide S2 exerce la force #VF#V#12->1#2 sur le solide S1 et on a :
+#VF#V#11->2#2= -#VF#V#12->1#2
+Les 2 forces ont la même droite d'action.
+
+

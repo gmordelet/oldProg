@@ -1,0 +1,19 @@
+
+public class test {
+	public static void main(String[] args) {
+		test2 t2 = new test2();
+		t2.print();
+	}
+}
+
+class test1 {
+	int t;
+	
+	void print() {
+		System.out.println("salut");
+	}
+}
+
+class test2 extends test1 {
+	
+}

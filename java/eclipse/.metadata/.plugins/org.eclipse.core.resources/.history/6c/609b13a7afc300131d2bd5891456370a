@@ -1,0 +1,27 @@
+package pile;
+
+public class Pile {
+
+}
+
+class Elem {
+	private int val;
+	private Elem next;
+	
+	Elem(int v, Elem n) {
+		val = v;
+		next = n;
+	}
+	
+	int getVal() {
+		return val;
+	}
+	
+	Elem getNext() {
+		return next;
+	}
+	
+	void setNext(Elem n) {
+		next = n;
+	}
+}

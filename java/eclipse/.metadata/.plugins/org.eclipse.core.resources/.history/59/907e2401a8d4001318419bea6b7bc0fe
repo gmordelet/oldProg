@@ -1,0 +1,30 @@
+
+public class test {
+	public static void main(String[] args) {
+		test1 t1 = new test2();
+		t1.print();
+	}
+}
+
+class test1 {
+	int t;
+	
+	public test1() {
+		t = 1;
+	}
+	
+	void print() {
+		System.out.println("salut");
+	}
+}
+
+class test2 extends test1 {
+	float t;
+	public test2() {
+		t = 0.1f;
+	}
+	
+	void print() {
+		System.out.println("cool");
+	}
+}
