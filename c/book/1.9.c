@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+/*
 int main()
 {
 	int c;
@@ -19,6 +20,26 @@ int main()
 					putchar(c);
 					c = getchar();
 				}
+		}
+	return (0);
+}
+*/
+
+int main()
+{
+	int c, last;
+	
+	last = 'a';
+	while ((c = getchar()) != EOF)
+		{
+			if (c == ' ')
+				{
+					if (last != ' ')
+						putchar(c);
+				}
+			else
+					putchar(c);
+			last = c;
 		}
 	return (0);
 }
