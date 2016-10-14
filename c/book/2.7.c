@@ -2,15 +2,16 @@
 
 unsigned	invert(unsigned x, unsigned p, unsigned n)
 {
-
-	return (0);
+	unsigned	xMask = ~(~0 << n) << p - n + 1;
+	return (x ^ xMask);
 }
 
 int			main()
 {
-	unsigned	x	= 0;
-	unsigned	p	= 4;
-	unsigned	n	= 3;
+	unsigned	x	=  49281;
+	unsigned	p	= 7;
+	unsigned	n	= 5;
+	PrintToBaseN(x, 2);
 	PrintToBaseN(invert(x, p, n), 2);
 	return (0);
 }
