@@ -11,5 +11,6 @@
 # define ArrSize(arr) (sizeof(arr) / sizeof(arr[0]))
 
 void	PrintToBase(unsigned n, unsigned base);
+int		binsearch(int x, int v[], int len);
 
 #endif
