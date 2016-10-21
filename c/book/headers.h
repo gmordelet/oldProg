@@ -9,6 +9,7 @@
 
 # define PrintToBaseN(n, base) PrintToBase(n, base); printf("\n");
 # define ArrSize(arr) (sizeof(arr) / sizeof(arr[0]))
+# define Max(a, b) ((a) > (b)) ? a : b
 
 void	PrintToBase(unsigned n, unsigned base);
 int		binsearch(int x, int v[], int len);
