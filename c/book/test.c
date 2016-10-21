@@ -1,28 +1,14 @@
 #include "headers.h"
 
-#define SIZE 800000
+#define BUFFSIZE 2
 
 int main()
 {
-	int arr1[SIZE], arr2[SIZE + 1], i;
+	char	s[BUFFSIZE];
+	int n;
 
-	for (i = 0; i < SIZE; ++i)
-		arr1[i] = i;
-	for (i = 0; i <= SIZE; ++i)
-		arr2[i] = i;
-	for (i = 0; i < SIZE; ++i)
-		if (!BinSearch(i, arr1, ArrSize(arr1)))
-			printf("FAIL\n");
-	for (i = 0; i <= SIZE; ++i)
-		if (!BinSearch(i, arr2, ArrSize(arr2)))
-			printf("FAIL\n");
-	if (BinSearch(-1, arr1, ArrSize(arr1)))
-		printf("FAIL\n");
-	if (BinSearch(SIZE, arr1, ArrSize(arr1)))
-		printf("FAIL\n");
-	if (BinSearch(-1, arr2, ArrSize(arr2)))
-		printf("FAIL\n");
-	if (BinSearch(SIZE + 1, arr2, ArrSize(arr2)))
-		printf("FAIL\n");
+	while (n = GetLine(s, BUFFSIZE))
+		printf("%s", s);
+	printf("%d\n", n);
 	return (0);
 }

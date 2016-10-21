@@ -1,6 +1,6 @@
 #include "headers.h"
 
-#define BUFSIZ 1024
+#define BUFFSIZE 1024
 
 void	escape(char *s, char *t)
 {
@@ -26,8 +26,13 @@ void	escape(char *s, char *t)
 
 int		main()
 {
-	char s[BUFSIZ], t[BUFSIZ];
-	
+	char s[BUFFSIZE], t[BUFFSIZE];
+
+	while (GetLine(s, BUFFSIZE))
+		{
+			escape(s, t);
+			printf("%s", t);
+		}
 	
 	return (0);
 }

@@ -13,5 +13,6 @@
 
 void	PrintToBase(unsigned n, unsigned base);
 int		binsearch(int x, int v[], int len);
+size_t	GetLine(char *s, size_t max);
 
 #endif

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sources='PrintToBase.c BinSearch.c'
+sources='PrintToBase.c BinSearch.c GetLine.c'
 
 gcc -Werror -Wextra -Wall -c $sources
 ar rc libbook.a *.o

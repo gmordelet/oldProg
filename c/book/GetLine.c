@@ -6,11 +6,13 @@ size_t	GetLine(char *s, size_t max)
 	int c;
 
 	n = 0;
-	while (1)
+	while ((c = getchar()) != EOF && n < max - 1)
 		{
-			c = getchar();
-			if (c == EOF)
+			++n;
+			*(s++) = c;
+			if (c == '\n')
 				break;
-			if ()
 		}
+	*s = '\0';
+	return (n);
 }
