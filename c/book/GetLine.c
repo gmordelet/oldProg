@@ -6,7 +6,7 @@ size_t	GetLine(char *s, size_t max)
 	int c;
 
 	n = 0;
-	while ((c = getchar()) != EOF && n < max - 1)
+	while (n < max - 1 && (c = getchar()) != EOF)
 		{
 			++n;
 			*(s++) = c;
