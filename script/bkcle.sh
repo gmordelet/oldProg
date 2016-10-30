@@ -4,6 +4,12 @@ src=$HOME/git/oldProg/script/src
 dest=$HOME/git/oldProg/script/dest
 c_date=$(date "+%y%m%d%H%M%S")
 
+dir_dest=$(ls -d $dest)
+if [ -z $dir_dest ]
+then
+	mkdir -v $dest
+fi
+
 dir_count=$(ls $dest -p | tr ' ' '\n' | grep '/' | wc -l)
 if [ $dir_count -lt 3 ]
 then
